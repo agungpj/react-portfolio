@@ -1,9 +1,8 @@
-import React from "react";
 import AboutSection from "../components/AboutSection";
 import ServicesSection from "../components/ServicesSection";
 import FaqSection from "../components/FaqSection";
 
-function AboutUs() {
+const AboutUs = () => {
   return (
     <>
       <AboutSection />
@@ -11,6 +10,6 @@ function AboutUs() {
       <FaqSection />
     </>
   );
-}
+};
 
 export default AboutUs;

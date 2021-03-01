@@ -1,6 +1,4 @@
-import React from "react";
-
-export const FaqSection = () => {
+const FaqSection = () => {
   return (
     <div className='faq'>
       <h2>
