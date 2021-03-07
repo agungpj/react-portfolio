@@ -1,11 +1,15 @@
+import { About } from "../styles";
+import styled from "styled-components";
+import Toggle from "./Toggle";
+import {AnimateSharedLayout} from 'framer-motion'
 const FaqSection = () => {
   return (
-    <div className='faq'>
+    <AnimateSharedLayout>
+    <Faq>
       <h2>
         Any Question <span>FAQ</span>
       </h2>
-      <div className='question'>
-        <h4>How Do I Start ?</h4>
+      <Toggle title='How do i start?'>
         <div className='answer'>
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
@@ -13,9 +17,9 @@ const FaqSection = () => {
             corrupti.
           </p>
         </div>
-      </div>
-      <div className='question'>
-        <h4>Daily Schedule</h4>
+      </Toggle>
+
+      <Toggle title='Daily Schedule'>
         <div className='answer'>
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
@@ -23,9 +27,9 @@ const FaqSection = () => {
             corrupti.
           </p>
         </div>
-      </div>
-      <div className='question'>
-        <h4>Different Payment Methos</h4>
+      </Toggle>
+
+      <Toggle title='Different Paymanet Method'>
         <div className='answer'>
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
@@ -33,9 +37,8 @@ const FaqSection = () => {
             corrupti.
           </p>
         </div>
-      </div>
-      <div className='question'>
-        <h4>What Product Do You Offer?</h4>
+      </Toggle>
+      <Toggle title='What Product Do You Offers?'>
         <div className='answer'>
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
@@ -43,9 +46,38 @@ const FaqSection = () => {
             corrupti.
           </p>
         </div>
-      </div>
-    </div>
+      </Toggle>
+    </Faq>
+    </AnimateSharedLayout>
   );
 };
+
+const Faq = styled(About)`
+  display: block;
+  span {
+    display: block;
+  }
+  h2 {
+    padding-bottom: 2rem;
+    font-weight: lighter;
+  }
+  .faq-line {
+    background: #cccccc;
+    height: 0.2rem;
+    margin: 2rem 0rem;
+    width: 100%;
+  }
+  .question {
+    padding: 3rem 0rem;
+    cursor: pointer;
+  }
+  .answer {
+    padding: 2rem 0rem;
+    cursor: pointer;
+    p {
+      padding: 1rem 0rem;
+    }
+  }
+`;
 
 export default FaqSection;
